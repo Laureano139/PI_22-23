@@ -50,3 +50,38 @@ int p3(){
     
     return 0;
 }
+
+int bitsUm(unsigned int n) {
+    int count = 0;
+    
+    while (n != 0) {
+        if (n % 2 == 1) {
+            count++;
+        }
+        n = n / 2;
+    }
+    
+    return count;
+}
+
+int trailingZ(unsigned int n) {
+    int count = 0;
+    
+    while ((n & 1) == 0 && n != 0) {
+        count++;
+        n = n >> 1;
+    }
+    
+    return count;
+}
+
+int qDig(unsigned int n) {
+    int count = 1;
+    
+    while (n >= 10) {
+        count++;
+        n /= 10;
+    }
+    
+    return count;
+}
